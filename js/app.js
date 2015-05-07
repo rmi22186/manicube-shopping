@@ -1,50 +1,22 @@
-var manicubeApp = angular.module('manicubeApp', ['ui.router']);
+angular.module('manicubeApp', ['ui.router', 'manicube.controllers', 'manicubeFactory'])
 
-manicubeApp.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider) {
     
   $urlRouterProvider.otherwise('/shop');
   
   $stateProvider
     .state('shop', {
-        url: '/shop',
-        templateUrl: '../views/shop.html'
+      url: '/shop',
+      templateUrl: '../views/shop.html',
+      controller: 'ManicubeOfferingsCtrl'
+    })
+    .state('shopDetails', {
+      url: '/shop/:item',
+      templateUrl: '../views/details.html',
+      controller: 'detailsCtrl'
     })
     .state('cart', {
-        url: '/cart',
-        templateUrl: '../views/cart.html'
+      url: '/cart',
+      templateUrl: '../views/cart.html'
     });
-    // // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
-    
-    // .state('about', {
-    //     // we'll get to this in a bit
-    // });
-    
 });
-
-manicubeApp.controller('manicubeController', function($scope) {
-
-  $scope.offerings = [
-      { 'name': 'Manicure',
-        'price': 12,
-        'url': 'assets/manicure.gif'
-      },
-      { 'name': 'Haircut',
-        'price': 20,
-        'url': 'assets/haircut.gif'
-      },
-      
-      { 'name': 'Massage',
-        'price': 15,
-        'url': 'assets/massage.gif'
-      },
-  ];
-
-  $scope.giftCardPrices = [25, 50, 100];
-
-});
-
-
-
-
-// var routerApp = angular.module('routerApp', ['ui.router']);
-

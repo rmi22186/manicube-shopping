@@ -1,6 +1,8 @@
 <div class="row" id="mainOfferings">
   <div class='col-xs-4 text-center border' ng-repeat='item in offerings'>
-      <p><img class='top-padding' ng-src={{item.url}}></p>
+      <a ui-sref="shopDetails({ item: item.name })">
+        <p><img class='top-padding' ng-src={{item.url}}></p>
+      </a>
       <p>{{item.name}}</p>
       <p class="bottom-padding">${{item.price}}</p>
   </div>

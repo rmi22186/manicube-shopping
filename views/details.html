@@ -1,18 +1,24 @@
 
 <div class="container">
   <div class="row">
-    <h1>{{Item Name}}</h1>
+    <h1>{{item.name}}</h1>
   </div>
   <div class="row">
     <div class="col-xs-3">
-      {{Item Picture}}
+      <img class='top-padding' ng-src={{item.url}}>
     </div>
     <div class="col-xs-9">
       <p>Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur</p>
-      Price: {{Item Price}}
+      <p>Price: ${{item.price}}</p>
 
-      Quantity
-      
+      <p>Quantity</p>
+      <select>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
       <button>Add to Cart</button>
     </div>
   </div>
