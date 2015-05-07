@@ -1,0 +1,13 @@
+.border {
+  border-width: 2px;
+  border-style: solid;
+  border-color: gray;
+}
+
+.top-padding {
+  padding-top: 50px;
+}
+
+.bottom-padding {
+  padding-bottom: 50px;
+}
