@@ -1,0 +1,16 @@
+<div class="row" id="mainOfferings">
+  <div class='col-xs-4 text-center border' ng-repeat='item in offerings'>
+      <p><img class='top-padding' ng-src={{item.url}}></p>
+      <p>{{item.name}}</p>
+      <p class="bottom-padding">${{item.price}}</p>
+  </div>
+</div>
+<p>
+
+<div class="row" id="giftCards">
+  <div class='col-xs-4 text-center border' ng-repeat='num in giftCardPrices'>
+    <p><img class='top-padding'src='assets/giftcard.gif'></p>
+    <p>Gift Card</p>
+    <p class="bottom-padding">${{num}}</p>
+  </div>
+</div>
