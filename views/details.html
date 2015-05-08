@@ -12,14 +12,15 @@
       <p>Price: ${{item.price}}</p>
 
       <p>Quantity</p>
-      <select>
+      <select ng-model="quantity">
         <option>1</option>
         <option>2</option>
         <option>3</option>
         <option>4</option>
         <option>5</option>
+        {{quantity}}
       </select>
-      <button>Add to Cart</button>
+      <button ng-click="addToCart(item, quantity)">Add to Cart</button>
     </div>
   </div>
 </div>

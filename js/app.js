@@ -17,6 +17,7 @@ angular.module('manicubeApp', ['ui.router', 'manicube.controllers', 'manicubeFac
     })
     .state('cart', {
       url: '/cart',
-      templateUrl: '../views/cart.html'
+      templateUrl: '../views/cart.html',
+      controller: 'cartCtrl'
     });
 });

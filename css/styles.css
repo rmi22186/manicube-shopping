@@ -11,3 +11,15 @@
 .bottom-padding {
   padding-bottom: 50px;
 }
+
+.increment {
+  height: 20px;
+  width: 20px;
+  background-color: green;
+}
+
+.decrement {
+  height: 20px;
+  width: 20px;
+  background-color: red;
+}
