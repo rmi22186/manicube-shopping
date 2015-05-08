@@ -2,7 +2,7 @@ A quick front end shopping cart experience
 
 1. Clone this repo down
 2. ```npm install``` to install express
-3. No need to bower 
+3. ```bower install``` to install angular and bootstrap dependencies
 4. Run ```node server.js```
 5. Go to localhost:3000
 
