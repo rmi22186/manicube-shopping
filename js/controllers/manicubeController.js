@@ -33,17 +33,15 @@ angular.module('manicube.controllers', [])
 
   $scope.gratuity = 0;
 
-  // $scope.$watch = function(gratuity) {
-  //   $scope.totals.total += gratuity;
-  // };
-
-  $scope.totals.total = $scope.gratuity + $scope.totals.tax;
-
   $scope.decrement = function(item) {
     Cart.decrementItem(item);
   };
 
   $scope.increment = function(item) {
     Cart.incrementItem(item);
+  };
+
+  $scope.remove = function(item) {
+    Cart.remove(item);
   };
 });

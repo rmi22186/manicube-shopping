@@ -1,7 +1,7 @@
 angular.module('manicubeFactory', [])
 
 .factory('ManicubeOfferings', function() {
-
+  //store all items
   var offerings = [
       { 'name': 'Manicure',
         'price': 12,
@@ -17,17 +17,17 @@ angular.module('manicubeFactory', [])
         'url': 'assets/massage.gif'
       },
 
-      { 'name': '$25 Gift Card',
+      { 'name': 'Gift Card',
         'price': 25,
         'url': 'assets/giftcard.gif'
       },
 
-      { 'name': '$50 Gift Card',
+      { 'name': 'Gift Card',
         'price': 50,
         'url': 'assets/giftcard.gif'
       },
 
-      { 'name': '$100 Gift Card',
+      { 'name': 'Gift Card',
         'price': 100,
         'url': 'assets/giftcard.gif'
       },
@@ -39,7 +39,7 @@ angular.module('manicubeFactory', [])
         return offerings[i];
       }
     }
-    console.log('?? ¯\\_(ツ)_/¯ ??');
+    console.log('?? go fish! ¯\\_(ツ)_/¯ ??');
   };
 
   var giftCardPrices = [25, 50, 100];
@@ -68,6 +68,17 @@ angular.module('manicubeFactory', [])
       this.cost = quantity*price;
     }
     calculateTotals();
+    console.log(items);
+  };
+
+  var remove = function(name) {
+    console.log(name);
+    if (items[name]) {
+      console.log('hi');
+      delete items[name];
+    }
+    calculateTotals();
+    console.log(items);
   };
 
   var calculateSubtotals = function() {
@@ -118,6 +129,7 @@ angular.module('manicubeFactory', [])
     totals: totals,
     gratuity: gratuity,
     setItem: setItem,
+    remove: remove,
     calculateSubtotals: calculateSubtotals,
     calculateTotal: calculateTotal,
     calculateTotals: calculateTotals,

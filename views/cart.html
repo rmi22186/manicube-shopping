@@ -20,6 +20,8 @@
   <!-- repeat over items -->
   <div class="row" ng-repeat="(key, value) in items">
     <div class="col-xs-1">
+    <div class="glyphicon glyphicon-remove" ng-click="remove(key)">
+    </div>
     </div>
     <div class="col-xs-5">
     {{key}}
@@ -45,10 +47,10 @@
     <h3>Total</h3>
     </div>
     <div class="col-xs-1">
-    {{totals.subtotal}}<br/>
-    {{totals.tax}}<p>
-    <input type="number" ng-model="gratuity"><p>
-    {{totals.total+gratuity}}<br/>
+    <h3>{{totals.subtotal}}</h3>
+    <h3>{{totals.tax}}</h3>
+    <input type="number" ng-model="gratuity" min=0><p>
+    <h3>{{totals.total+gratuity}}</h3>
     </div>
   </div>
 </div>
