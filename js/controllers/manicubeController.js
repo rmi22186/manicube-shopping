@@ -4,7 +4,7 @@ angular.module('manicube.controllers', [])
   $scope.offerings = ManicubeOfferings.offerings;
 })
 
-.controller('detailsCtrl', function($scope, ManicubeOfferings, $stateParams, Cart) {
+.controller('detailsCtrl', function($scope, ManicubeOfferings, $stateParams, Cart, $location) {
   $scope.item = ManicubeOfferings.get($stateParams.item);
 
   $scope.quantity;
@@ -20,6 +20,7 @@ angular.module('manicube.controllers', [])
 
   $scope.addToCart = function(item) {
     Cart.setItem(item.name, item.price, $scope.quantity);
+    $location.path("/cart");
   };
 })
 

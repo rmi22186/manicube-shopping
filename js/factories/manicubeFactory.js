@@ -68,7 +68,6 @@ angular.module('manicubeFactory', [])
       this.cost = quantity*price;
     }
     calculateTotals();
-    console.log(items);
   };
 
   var remove = function(name) {
@@ -90,7 +89,7 @@ angular.module('manicubeFactory', [])
   };
 
   var calculateTax = function() {
-    totals.tax = totals.subtotal*(0.08);
+    totals.tax = totals.subtotal*(0.08).toFixed(2);;
     console.log('tax', totals.tax);
   };
 
