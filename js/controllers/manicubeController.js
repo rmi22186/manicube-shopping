@@ -11,10 +11,6 @@ angular.module('manicube.controllers', [])
   var cartItems = Object.keys(Cart.items);
 
   for (var i = 0; i < cartItems.length; i++) {
-    // console.log($scope.item.name);
-    // console.log(cartItems[i]);
-    // console.log(Cart.cart[$scope.item.name]);
-    // console.log(cartItems[i].name)
     if ($scope.item.name === cartItems[i]) {
       $scope.quantity = Cart.items[$scope.item.name];
     } else {

@@ -17,11 +17,6 @@
     "url": "https://github.com/rmi22186/manicube-shopping/issues"
   },
   "homepage": "https://github.com/rmi22186/manicube-shopping",
-  "devDependencies": {
-    "browser-sync": "^2.7.1",
-    "gulp": "^3.8.11",
-    "gulp-nodemon": "^2.0.2"
-  },
   "dependencies": {
     "express": "^4.12.3"
   }
